@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { Code, Server, Coffee, Globe, Twitter, Github, Linkedin, Twitch } from 'lucide-react'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -20,7 +21,7 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <img 
+            <Image  
               src="image.png?height=300&width" 
               alt="Patinho Tech" 
               className="rounded-full w-48 h-48 object-cover mx-auto"
