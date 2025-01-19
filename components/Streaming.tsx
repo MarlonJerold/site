@@ -26,7 +26,7 @@ const content: ContentItem[] = [
 
 export default function Streaming() {
   return (
-    <section id="streaming" className="py-20 mt-16">
+    <section id="postagens" className="py-20 mt-16">
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"

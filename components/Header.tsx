@@ -6,11 +6,12 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  const navItems: string[] = ['Sobre', 'Projetos', 'Experiência', 'Streaming'];
+  // Alterando o nome de "Streaming" para "Postagens"
+  const navItems: string[] = ['Sobre', 'Projetos',  'Postagens', 'Experiência'];
 
   return (
     <motion.header 
-      className="bg-gray-900 shadow-lg fixed w-full z-10"
+      className="bg-gray-900 shadow-lg fixed top-0 left-0 w-full z-20"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
