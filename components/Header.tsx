@@ -3,10 +3,6 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
-interface HeaderProps {
-  navItems: string[];
-}
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
