@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Roboto } from 'next/font/google'
+import { Atkinson_Hyperlegible } from 'next/font/google'
 
-const roboto = Roboto({ subsets: ['latin'], weight: ['300', '400', '700'] })
+const atkinson = Atkinson_Hyperlegible({ 
+  subsets: ['latin'], 
+  weight: ['400', '700'] // Definindo os pesos que você deseja importar
+})
 
 export const metadata: Metadata = {
   title: 'Marlon',
@@ -16,8 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${roboto.className} bg-gray-900 text-gray-300`}>{children}</body>
+      <body className={`${atkinson.className} bg-gray-900 text-gray-300`}>
+        {children}
+      </body>
     </html>
   )
 }
-

@@ -6,7 +6,7 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  // Alterando o nome de "Streaming" para "Postagens"
+
   const navItems: string[] = ['Sobre', 'Projetos',  'Postagens', 'Experiência'];
 
   return (

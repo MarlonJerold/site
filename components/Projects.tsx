@@ -20,7 +20,7 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projetos" className="py-20 mt-16 bg-gray-900">
+    <section id="projetos" className="py-20 mt-16">
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
@@ -44,11 +44,10 @@ interface ProjectCardProps {
   project: Project;
   index: number;
 }
-
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-gray-800 text-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+      className="bg-gray-800 text-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -75,4 +74,5 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
     </motion.div>
   )
+
 }

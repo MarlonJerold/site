@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 100, 100, 100; /* Texto muito escuro, quase invisível */
-  --background-start-rgb: 0, 0, 0; /* Fundo preto puro */
-  --background-end-rgb: 2, 2, 2; /* Fundo quase preto, mas com leve variação */
+  --foreground-rgb: 229, 231, 235;
+  --background-start-rgb: 20, 24, 39;
+  --background-end-rgb: 31, 41, 55;
 }
 
 body {
@@ -13,19 +13,21 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
 }
 
+/* Estilização para a barra de rolagem */
 ::-webkit-scrollbar {
-  width: 8px; /* Fino para um design mais minimalista */
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000; /* Preto absoluto para o track */
+  background: #2d3748;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #121212; /* Tom super escuro para o thumb */
-  border-radius: 8px;
+  background: #4a5568;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a1a1a; /* Contraste muito leve no hover */
+  background: #718096;
 }
+
