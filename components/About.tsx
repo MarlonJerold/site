@@ -21,7 +21,7 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image 
+            <img 
               src="image.png?height=300&width" 
               alt="Patinho Tech" 
               className="rounded-full w-48 h-48 object-cover mx-auto"
@@ -34,7 +34,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg mb-6 text-center md:text-left text-gray-300">
-            Olá, sou Marlon, desenvolvedor de software e atualmente estagiário na @Compass UOL, atuando como DevSecOps. Estou desenvolvendo minhas habilidades em Cloud, especialmente com os serviços da AWS. Além disso, estou cursando Bacharelado em Engenharia de Software. Tenho um blog e no meu tempo livre, faço lives codificando e jogando alguns games.
+            Olá, me chamo Marlon, sou desenvolvedor de software como foco em Cloud e Serivços da AWS. Atualmente cursando Bacharelado em Engenharia de Software e atuando como DevSecOps na Compass UOL.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <Skill icon={<Server />} text="DevOps" />
