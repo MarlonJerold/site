@@ -1,6 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Play, Book } from 'lucide-react'
+import { Play, Book, ExternalLink } from 'lucide-react'
 
 interface ContentItem {
   type: "tutorial" | "stream";
@@ -26,7 +26,7 @@ const content: ContentItem[] = [
 
 export default function Streaming() {
   return (
-    <section id="postagens" className="py-20 mt-16 "> {/* Alteração para bg-white */}
+    <section id="postagens" className="py-20 mt-16 ">
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
@@ -62,21 +62,24 @@ function ContentCard({ item, index }: ContentCardProps) {
       <div className="p-6">
         <div className="flex items-center mb-4">
           {item.type === "stream" ? (
-            <Play className="text-red-500 mr-2" />
+            <Play className="text-[#313b4b] mr-2" />
           ) : (
-            <Book className="text-green-500 mr-2" />
+            <Book className="text-[#313b4b] mr-2" />
           )}
           <h3 className="text-xl font-semibold text-gray-100">{item.title}</h3>
         </div>
         <p className="text-gray-300 mb-4">{item.description}</p>
-        <a 
-          href={item.link} 
-          className="inline-flex items-center text-blue-400 hover:text-blue-300"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {item.type === "stream" ? "Assistir stream" : "ver blog/post"}
-        </a>
+        <div className="flex items-center mt-4">
+          <ExternalLink className="text-blue-400 mr-2" />
+          <a 
+            href={item.link} 
+            className="text-blue-400 hover:text-blue-300"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {item.type === "stream" ? "Assistir stream" : "Ver blog/post"}
+          </a>
+        </div>
       </div>
     </motion.div>
   )

@@ -23,7 +23,7 @@ export default function Projects() {
     <section id="projetos" className="py-20 mt-16">
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-8 text-blue-400"
+          className="text-3xl font-bold text-center mb-8 text-[#c9c9c9]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -39,6 +39,7 @@ export default function Projects() {
     </section>
   )
 }
+
 interface ProjectCardProps {
   project: Project;
   index: number;
@@ -57,14 +58,14 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((tech, i) => (
-            <span key={i} className="text-sm bg-blue-600 text-white px-2 py-1 rounded-full">
+            <span key={i} className="text-sm bg-[#c9c9c9] text-white px-2 py-1 rounded-full">
               {tech}
             </span>
           ))}
         </div>
         <a 
           href={project.link} 
-          className="inline-flex items-center text-blue-400 hover:text-blue-300"
+          className="inline-flex items-center text-[#c9c9c9] hover:text-[#313b4b]"
           target="_blank"
           rel="noopener noreferrer"
         >

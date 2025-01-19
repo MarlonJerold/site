@@ -36,7 +36,7 @@ export default function Experience() {
     <section id="experiencia" className="py-20 mt-16">
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-8 text-blue-400"
+          className="text-3xl font-bold text-center mb-8 text-[#c9c9c9]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -68,7 +68,7 @@ function ExperienceCard({ experience, index }: ExperienceCardProps) {
     >
       <div className="p-6">
         <div className="flex items-center mb-2">
-          <Briefcase className="text-blue-400 mr-2" />
+          <Briefcase className="text-[#313b4b] mr-2" />
           <h3 className="text-xl font-semibold text-gray-100">{experience.title}</h3>
         </div>
         <p className="text-gray-300 mb-1">{experience.company}</p>
