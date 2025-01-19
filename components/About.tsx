@@ -33,7 +33,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p className="text-lg mb-6 text-center md:text-left text-[#c9c9c9]">
-          Olá, me chamo Marlon, sou desenvolvedor de software com foco em Cloud e Serviços da AWS. Atualmente cursando Bacharelado em Engenharia de Software e atuando como DevSecOps na Compass UOL.
+          Olá, me chamo Marlon, sou desenvolvedor de software com foco em Cloud e Serviços da AWS. Atualmente cursando Bacharelado em Engenharia de Software e estagiando como DevSecOps na Compass UOL.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
               <Skill icon={<Server className="text-[#313b4b]" />} text="DevOps" />
