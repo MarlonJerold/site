@@ -10,7 +10,8 @@ interface HeaderProps {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  const navItems = ['Sobre', 'Projetos', 'Experiência', 'Streaming'];
+  // O array de itens de navegação pode ser recebido como prop, mas estamos usando ele diretamente no componente
+  const navItems: string[] = ['Sobre', 'Projetos', 'Experiência', 'Streaming'];
 
   return (
     <motion.header 

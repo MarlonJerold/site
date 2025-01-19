@@ -2,7 +2,14 @@
 import { motion } from 'framer-motion'
 import { Play, Book } from 'lucide-react'
 
-const content = [
+interface ContentItem {
+  type: "tutorial" | "stream";
+  title: string;
+  description: string;
+  link: string;
+}
+
+const content: ContentItem[] = [
   {
     type: "tutorial",
     title: "Caminhos para entender a AWS",
@@ -39,7 +46,12 @@ export default function Streaming() {
   )
 }
 
-function ContentCard({ item, index }: { item: any, index: number }) {
+interface ContentCardProps {
+  item: ContentItem;
+  index: number;
+}
+
+function ContentCard({ item, index }: ContentCardProps) {
   return (
     <motion.div 
       className="bg-gray-700 rounded-lg shadow-md overflow-hidden"
@@ -70,4 +82,3 @@ function ContentCard({ item, index }: { item: any, index: number }) {
     </motion.div>
   )
 }
-

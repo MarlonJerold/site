@@ -2,7 +2,14 @@
 import { motion } from 'framer-motion'
 import { ExternalLink } from 'lucide-react'
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  link: string;
+}
+
+const projects: Project[] = [
   {
     title: "Milho News",
     description: "Milho News é um portal diário open-source que reúne as principais novidades, tendências, discussões e oportunidades na Bluesky para desenvolvedores brasileiros. Oferece resumos diretos e práticos para manter você atualizado sobre o que realmente importa no universo dev.",
@@ -33,7 +40,12 @@ export default function Projects() {
   )
 }
 
-function ProjectCard({ project, index }: { project: any, index: number }) {
+interface ProjectCardProps {
+  project: Project;
+  index: number;
+}
+
+function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div 
       className="bg-gray-800 rounded-lg shadow-md overflow-hidden"
@@ -46,7 +58,7 @@ function ProjectCard({ project, index }: { project: any, index: number }) {
         <h3 className="text-xl font-semibold mb-2 text-gray-100">{project.title}</h3>
         <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.tech.map((tech: string, techIndex: number) => (
+          {project.tech.map((tech, techIndex) => (
             <span key={techIndex} className="bg-blue-900 text-blue-200 text-xs font-semibold px-2 py-1 rounded">
               {tech}
             </span>
