@@ -33,8 +33,8 @@ const experiences: ExperienceType[] = [
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="experiencia" className="py-20 mt-16">
+      <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
           initial={{ opacity: 0 }}

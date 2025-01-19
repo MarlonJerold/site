@@ -6,7 +6,7 @@ import Image from 'next/image'
 export default function About() {
   return (
     <section id="sobre" className="py-20 mt-16">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
           initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image  
+            <Image 
               src="image.png?height=300&width" 
               alt="Patinho Tech" 
               className="rounded-full w-48 h-48 object-cover mx-auto"
@@ -82,4 +82,3 @@ function SocialIcon({ href, icon, label }: { href: string, icon: React.ReactNode
     </motion.a>
   )
 }
-

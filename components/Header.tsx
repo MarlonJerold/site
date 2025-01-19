@@ -6,7 +6,6 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  // O array de itens de navegação pode ser recebido como prop, mas estamos usando ele diretamente no componente
   const navItems: string[] = ['Sobre', 'Projetos', 'Experiência', 'Streaming'];
 
   return (
@@ -16,7 +15,7 @@ export default function Header() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h1 
           className="text-2xl font-bold text-blue-500"
           whileHover={{ scale: 1.05 }}

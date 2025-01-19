@@ -20,10 +20,10 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section id="projetos" className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
+    <section id="projetos" className="py-20 mt-16 bg-gray-900">
+      <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
-          className="text-3xl font-bold text-center mb-8 text-blue-500"
+          className="text-3xl font-bold text-center mb-8 text-blue-400"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -47,19 +47,18 @@ interface ProjectCardProps {
 
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <motion.div 
-      className="bg-gray-800 rounded-lg shadow-md overflow-hidden"
+    <motion.div
+      className="bg-gray-800 text-gray-200 rounded-lg shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ scale: 1.03 }}
     >
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2 text-gray-100">{project.title}</h3>
+        <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
         <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.tech.map((tech, techIndex) => (
-            <span key={techIndex} className="bg-blue-900 text-blue-200 text-xs font-semibold px-2 py-1 rounded">
+          {project.tech.map((tech, i) => (
+            <span key={i} className="text-sm bg-blue-600 text-white px-2 py-1 rounded-full">
               {tech}
             </span>
           ))}
@@ -70,7 +69,8 @@ function ProjectCard({ project, index }: ProjectCardProps) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Ver projeto <ExternalLink className="ml-1 w-4 h-4" />
+          <ExternalLink className="mr-2" />
+          Ver projeto
         </a>
       </div>
     </motion.div>

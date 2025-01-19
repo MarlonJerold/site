@@ -32,7 +32,7 @@ const contributions: Contribution[] = [
 
 export default function OpenSource() {
   return (
-    <section id="opensource" className="py-20 bg-gray-900">
+    <section id="opensource" className="py-20 mt-16">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
