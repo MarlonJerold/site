@@ -58,7 +58,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.map((tech, i) => (
-            <span key={i} className="text-sm bg-[#c9c9c9] text-white px-2 py-1 rounded-full">
+            <span key={i} className="text-sm bg-[#313b4b] text-white px-2 py-1 rounded-full">
               {tech}
             </span>
           ))}

@@ -70,10 +70,10 @@ function ContentCard({ item, index }: ContentCardProps) {
         </div>
         <p className="text-gray-300 mb-4">{item.description}</p>
         <div className="flex items-center mt-4">
-          <ExternalLink className="text-blue-400 mr-2" />
+          <ExternalLink className="text-[#c9c9c9] mr-2" />
           <a 
             href={item.link} 
-            className="text-blue-400 hover:text-blue-300"
+            className="text-[#c9c9c9] hover:text-blue-300"
             target="_blank"
             rel="noopener noreferrer"
           >
