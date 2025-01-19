@@ -2,7 +2,14 @@
 import { motion } from 'framer-motion'
 import { GitBranch, Star } from 'lucide-react'
 
-const contributions = [
+interface Contribution {
+  project: string;
+  description: string;
+  stars: number;
+  forks: number;
+}
+
+const contributions: Contribution[] = [
   {
     project: "Spring Framework",
     description: "Melhoria de performance em processamento assíncrono",
@@ -45,7 +52,12 @@ export default function OpenSource() {
   )
 }
 
-function ContributionCard({ contribution, index }: { contribution: any, index: number }) {
+interface ContributionCardProps {
+  contribution: Contribution;
+  index: number;
+}
+
+function ContributionCard({ contribution, index }: ContributionCardProps) {
   return (
     <motion.div 
       className="bg-gray-800 rounded-lg shadow-md overflow-hidden"
@@ -71,4 +83,3 @@ function ContributionCard({ contribution, index }: { contribution: any, index: n
     </motion.div>
   )
 }
-

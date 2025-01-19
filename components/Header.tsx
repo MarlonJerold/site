@@ -1,10 +1,16 @@
 'use client'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, X, GitlabIcon as GitHub, Twitch } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
+
+interface HeaderProps {
+  navItems: string[];
+}
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
+
+  const navItems = ['Sobre', 'Projetos', 'Experiência', 'Streaming'];
 
   return (
     <motion.header 
@@ -22,7 +28,7 @@ export default function Header() {
         </motion.h1>
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
-            {['Sobre', 'Projetos', 'Experiência', 'Streaming'].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.li key={index} whileHover={{ scale: 1.1 }}>
                 <a href={`#${item.toLowerCase().replace('ê', 'e')}`} className="text-gray-400 hover:text-blue-500">
                   {item}
@@ -43,7 +49,7 @@ export default function Header() {
           exit={{ opacity: 0, height: 0 }}
         >
           <ul className="flex flex-col items-center py-4">
-            {['Sobre', 'Projetos', 'Experiência', 'Streaming'].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.li key={index} className="py-2">
                 <a 
                   href={`#${item.toLowerCase().replace('ê', 'e')}`} 
