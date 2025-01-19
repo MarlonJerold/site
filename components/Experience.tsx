@@ -2,7 +2,15 @@
 import { motion } from 'framer-motion'
 import { Briefcase } from 'lucide-react'
 
-const experiences = [
+// Definindo o tipo das experiências
+interface ExperienceType {
+  title: string;
+  company: string;
+  period: string;
+  description: string;
+}
+
+const experiences: ExperienceType[] = [
   {
     title: "DevSecOps",
     company: "Compass UOL",
@@ -45,7 +53,12 @@ export default function Experience() {
   )
 }
 
-function ExperienceCard({ experience, index }: { experience: any, index: number }) {
+interface ExperienceCardProps {
+  experience: ExperienceType;
+  index: number;
+}
+
+function ExperienceCard({ experience, index }: ExperienceCardProps) {
   return (
     <motion.div 
       className="bg-gray-800 rounded-lg shadow-md overflow-hidden"
