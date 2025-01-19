@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={`${atkinson.className} bg-gray-900 text-gray-300`}>
+      <body className={`${atkinson.className} bg-gray-1000 text-gray-300`}>
         {children}
       </body>
     </html>

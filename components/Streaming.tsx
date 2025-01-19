@@ -26,7 +26,7 @@ const content: ContentItem[] = [
 
 export default function Streaming() {
   return (
-    <section id="postagens" className="py-20 mt-16"> {/* Alteração para bg-white */}
+    <section id="postagens" className="py-20 mt-16 "> {/* Alteração para bg-white */}
       <div className="container mx-auto px-4 max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h2 
           className="text-3xl font-bold text-center mb-8 text-blue-400"
@@ -53,7 +53,7 @@ interface ContentCardProps {
 function ContentCard({ item, index }: ContentCardProps) {
   return (
     <motion.div 
-      className="bg-gray-700 rounded-2xl shadow-md overflow-hidden"
+      className="bg-[#212429] rounded-2xl shadow-md overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}

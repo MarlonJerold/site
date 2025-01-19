@@ -6,19 +6,18 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-
   const navItems: string[] = ['Sobre', 'Projetos',  'Postagens', 'Experiência'];
 
   return (
     <motion.header 
-      className="bg-gray-900 shadow-lg fixed top-0 left-0 w-full z-20"
+      className="bg-[#212429] shadow-lg fixed top-0 left-0 w-full z-20" 
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center max-w-full lg:max-w-4xl xl:max-w-5xl">
         <motion.h1 
-          className="text-2xl font-bold text-blue-500"
+          className="text-2xl font-bold text-[#c9c9c9]"
           whileHover={{ scale: 1.05 }}
         >
           Marlon Jerold
@@ -27,7 +26,7 @@ export default function Header() {
           <ul className="flex space-x-6">
             {navItems.map((item, index) => (
               <motion.li key={index} whileHover={{ scale: 1.1 }}>
-                <a href={`#${item.toLowerCase().replace('ê', 'e')}`} className="text-gray-400 hover:text-blue-500">
+                <a href={`#${item.toLowerCase().replace('ê', 'e')}`} className="text-gray-400 hover:text-[#6f6f6f]">
                   {item}
                 </a>
               </motion.li>
@@ -40,7 +39,7 @@ export default function Header() {
       </div>
       {isMenuOpen && (
         <motion.nav 
-          className="md:hidden bg-gray-900"
+          className="md:hidden bg-[#212429]" 
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}

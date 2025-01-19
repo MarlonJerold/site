@@ -39,15 +39,15 @@ export default function Projects() {
     </section>
   )
 }
-
 interface ProjectCardProps {
   project: Project;
   index: number;
 }
+
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-gray-800 text-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+      className="bg-[#212429] text-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -74,5 +74,4 @@ function ProjectCard({ project, index }: ProjectCardProps) {
       </div>
     </motion.div>
   )
-
 }

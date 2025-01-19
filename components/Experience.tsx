@@ -61,7 +61,7 @@ interface ExperienceCardProps {
 function ExperienceCard({ experience, index }: ExperienceCardProps) {
   return (
     <motion.div 
-      className="bg-gray-800 rounded-2xl shadow-md overflow-hidden"
+      className="bg-[#212429] rounded-2xl shadow-md overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
