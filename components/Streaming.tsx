@@ -14,13 +14,13 @@ const content: ContentItem[] = [
     type: "tutorial",
     title: "Caminhos para entender a AWS",
     description: "Caminhos iniciais para entender AWS",
-    link: "https://youtube.com/patinhotech"
+    link: "https://dev.to/marlonjerold/caminhos-para-entender-a-aws-348a"
   },
   {
     type: "tutorial",
     title: "Caminhos para ser Desenvolvedor Java",
     description: "Caminhos iniciais para entender sobre Java",
-    link: "https://youtube.com/patinhotech"
+    link: "https://dev.to/marlonjerold/caminhos-para-ser-desenvolvedor-java-h4n"
   }
 ]
 
