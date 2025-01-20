@@ -12,6 +12,12 @@ interface ContentItem {
 const content: ContentItem[] = [
   {
     type: "tutorial",
+    title: "Meu Primeiro Post Aqui",
+    description: "Primeira publicação no blog do site",
+    link: "/posts/primeiro-post"
+  },
+  {
+    type: "tutorial",
     title: "Caminhos para entender a AWS",
     description: "Caminhos iniciais para entender AWS",
     link: "https://dev.to/marlonjerold/caminhos-para-entender-a-aws-348a"
@@ -20,7 +26,7 @@ const content: ContentItem[] = [
     type: "tutorial",
     title: "Caminhos para ser Desenvolvedor Java",
     description: "Caminhos iniciais para entender sobre Java",
-    link: "https://dev.to/marlonjerold/caminhos-para-ser-desenvolvedor-java-h4n"
+    link: "https://youtube.com/patinhotech"
   }
 ]
 

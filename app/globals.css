@@ -31,3 +31,161 @@ body {
   background: #718096;
 }
 
+
+.prose {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.75;
+  color: #e5e7eb; /* Texto claro para fundo escuro */
+  background-color: #15191d; /* Fundo escuro */
+}
+
+/* Cabeçalhos */
+.prose h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #e5e7eb; /* Cor clara para título */
+}
+
+.prose h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #cbd5e0; /* Cor clara, mas menos intensa que o h1 */
+}
+
+.prose h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #cbd5e0; /* Cor clara para h3 */
+}
+
+.prose h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #cbd5e0; /* Cor clara para h4 */
+}
+
+.prose h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #a0aec0; /* Cor clara mais suave */
+}
+
+.prose h6 {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #718096; /* Cor mais suave para h6 */
+}
+
+/* Parágrafos */
+.prose p {
+  margin-bottom: 1rem;
+  color: #e5e7eb; /* Cor clara para o texto do parágrafo */
+}
+
+/* Links */
+.prose a {
+  color: #3182ce; /* Cor azul para links */
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #63b3ed; /* Cor mais clara ao passar o mouse */
+}
+
+/* Listas */
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  color: #e5e7eb; /* Texto claro para listas */
+}
+
+/* Citações */
+.prose blockquote {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 4px solid #4a5568; /* Borda suave, cor escura */
+  color: #e5e7eb; /* Texto claro para citação */
+  font-style: italic;
+}
+
+/* Códigos */
+.prose code {
+  background-color: #2d3748; /* Fundo escuro para o código */
+  color: #f7fafc; /* Texto claro para o código */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+.prose pre {
+  background-color: #2d3748; /* Fundo escuro para o bloco de código */
+  padding: 1rem;
+  border-radius: 4px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  color: #f7fafc; /* Texto claro para o código */
+}
+
+/* Imagens */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1rem 0;
+}
+
+/* Tabelas */
+.prose table {
+  width: 100%;
+  margin: 1rem 0;
+  border-collapse: collapse;
+}
+
+.prose th, .prose td {
+  padding: 0.75rem;
+  border: 1px solid #2d3748; /* Bordas escuras */
+  text-align: left;
+  color: #e5e7eb; /* Texto claro nas células */
+}
+
+.prose th {
+  background-color: #4a5568; /* Fundo escuro para cabeçalhos */
+  font-weight: bold;
+}
+
+
+.math {
+  display: inline-block;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f7fafc; /* Texto claro para as equações */
+  background-color: #2d3748; /* Fundo escuro */
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  margin: 0.2rem 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.math-display {
+  display: block;
+  background-color: #2d3748;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  color: #f7fafc;
+  overflow-x: auto;
+}
