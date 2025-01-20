@@ -64,7 +64,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         components={{
-          p({ children }: { node?: any; children?: React.ReactNode }) {
+          p({ children }: { children?: React.ReactNode }) {
             const value = String(children);
 
             if (value.startsWith("$$") && value.endsWith("$$")) {
