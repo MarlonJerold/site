@@ -1,6 +1,6 @@
 ---
 title: "A Recursão em Haskell, um novo mundo animalesco"
-description: "Este é um exemplo de post com LaTeX."
+description: "Se aventurando no mundo de Haskell."
 date: "2025-01-20"
 ---
 
