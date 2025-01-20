@@ -19,7 +19,7 @@ interface Post {
   content: string;
 }
 
-export async function getAllPosts(): Promise<Post[]> {
+async function getAllPosts(): Promise<Post[]> {
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'));
 
   const posts = files.map((file) => {
