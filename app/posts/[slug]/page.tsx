@@ -62,7 +62,6 @@ const PostPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <main className="mx-auto p-4 max-w-4xl">
-      <Header />
       <div className="mb-8">
         <h1 className="font-bold text-[2.5rem] mb-4">{post.data.title}</h1>
         <p className="text-gray-500">Publicado em: {post.data.date}</p>
