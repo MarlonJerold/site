@@ -1,4 +1,8 @@
-# Meu Primeiro Post Aqui
+---
+title: "Meu Primeiro Post Aqui"
+description: "Este é um exemplo de post com Arquivo .md."
+date: "2025-01-19"
+---
 
 Bem-vindo ao blog! Este é um artigo em **Markdown**.
 

@@ -1,4 +1,8 @@
-# Caminhos Para Sua Primeira Biblioteca
+---
+title: "Caminhos Para Sua Primeira Biblioteca"
+description: "Visões a respeito de bibliotecas e como elas podem nos inspirar."
+date: "2024-09-22"
+---
 
 Olá caro leitor, primeiramente peço desculpas pelo atraso em criar mais um post, coisas da minha cabeça que poderiam ser resolvida com algo, e esse algo pode ter várias funcionalidades que fariam eu me animar para criar mais um post, e é com essa breve introdução que iremos debater a respeito de caminhos para criar sua primeira biblioteca em Java, afinal, talvez essas funcionalidades, possa ser usada em mais cabecinhas e quem sabe, ser útil para muitos outros desenvolvedores que, como eu, estão em busca de algo que nos inspire.
  

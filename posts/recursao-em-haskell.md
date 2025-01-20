@@ -1,4 +1,8 @@
-# A Recursão em Haskell, um novo mundo animalesco
+---
+title: "A Recursão em Haskell, um novo mundo animalesco"
+description: "Este é um exemplo de post com LaTeX."
+date: "2025-01-20"
+---
 
 ##  Entendendo a Base das Regras e a Magia da Recursão
 
