@@ -18,6 +18,12 @@ const content: ContentItem[] = [
   },
   {
     type: "tutorial",
+    title: "Caminhos Para Sua Primeira Biblioteca",
+    description: "Uma pequena conversa sobre Bibliotecas em Java",
+    link: "/posts/caminhos-para-sua-primeira-biblioteca"
+  },
+  {
+    type: "tutorial",
     title: "Caminhos para entender a AWS",
     description: "Caminhos iniciais para entender AWS",
     link: "https://dev.to/marlonjerold/caminhos-para-entender-a-aws-348a"
