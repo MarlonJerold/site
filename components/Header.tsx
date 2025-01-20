@@ -2,11 +2,17 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false)
 
-  const navItems: string[] = ['Sobre', 'Projetos',  'Postagens', 'Experiência'];
+  const navItems: { label: string, href: string }[] = [
+    { label: 'Home', href: '/' },
+    { label: 'Sobre', href: '/sobre' },
+    { label: 'Projetos', href: '/projetos' },
+    { label: 'Experiência', href: '/experiencia' },
+  ];
 
   return (
     <motion.header 
@@ -26,9 +32,9 @@ export default function Header() {
           <ul className="flex space-x-6">
             {navItems.map((item, index) => (
               <motion.li key={index} whileHover={{ scale: 1.1 }}>
-                <a href={`#${item.toLowerCase().replace('ê', 'e')}`} className="text-gray-400 hover:text-[#6f6f6f]">
-                  {item}
-                </a>
+                <Link href={item.href} className="text-gray-400 hover:text-[#6f6f6f]">
+                  {item.label}
+                </Link>
               </motion.li>
             ))}
           </ul>
@@ -47,13 +53,13 @@ export default function Header() {
           <ul className="flex flex-col items-center py-4">
             {navItems.map((item, index) => (
               <motion.li key={index} className="py-2">
-                <a 
-                  href={`#${item.toLowerCase().replace('ê', 'e')}`} 
+                <Link 
+                  href={item.href} 
                   className="text-gray-400 hover:text-blue-500"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               </motion.li>
             ))}
           </ul>

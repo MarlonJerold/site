@@ -41,7 +41,7 @@ export default function Streaming() {
           transition={{ duration: 0.5 }}
         >
         </motion.h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {content.map((item, index) => (
             <ContentCard key={index} item={item} index={index} />
           ))}

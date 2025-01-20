@@ -1,18 +1,14 @@
 import Header from '@/components/Header';
+import About from '@/components/About'
+import Projects from '@/components/Projects'
+import Experience from '@/components/Experience'
 import Streaming from '@/components/Streaming'
-import RedesSociais from '@/components/RedesSociais';
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
-      <Streaming />
-      <section className="flex flex-col items-center justify-center min-h-[50vh]  space-y-6">
-  <RedesSociais />
-  <p className="text-lg text-center text-[#c9c9c9] max-w-lg">
-    O que passa na mente de um pato que escreve códigos
-  </p>
-</section>
+      <Projects />
       <div className="mt-4 text-center">
           <p className="text-sm">&copy; {new Date().getFullYear()} Marlon Jerold. Todos os direitos reservados.</p> <br></br>
         </div>

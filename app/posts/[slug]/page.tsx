@@ -8,6 +8,9 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import { BlockMath, InlineMath } from 'react-katex';  // Importando BlockMath e InlineMath
 import 'katex/dist/katex.min.css';  // Importando o CSS do KaTeX
+import RedesSociais from "@/components/RedesSociais";
+import Header from "@/components/Header";
+import Streaming from "@/components/Streaming";
 
 interface Post {
   slug: string;
@@ -53,12 +56,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
 
   return (
     <main className="mx-auto p-4 max-w-4xl">
+      <Header />
+      <br></br><br></br>
       <h1 className="font-bold text-[2.5rem] mb-4">{post.data.title}</h1>
       <p className="text-gray-500 mb-8">{post.data.date}</p>
 
-      {/* Usando ReactMarkdown com remark-math e react-katex */}
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, remarkMath]} // Adicionando remark-math
+        remarkPlugins={[remarkGfm, remarkMath]}
         components={{
           // Usando InlineMath para expressões inline
           code: ({ children, className }) => {
@@ -90,6 +94,23 @@ export default async function PostPage({ params }: { params: { slug: string } })
           </button>
         </Link>
       </div>
+        <section className="flex flex-col items-center justify-center min-h-[50vh]  space-y-6">
+        <RedesSociais />
+        <p className="text-lg text-center text-[#c9c9c9] max-w-lg">
+          O que passa na mente de um pato que escreve códigos
+        </p>
+      </section>
+      <Streaming />
+      <div className="mt-8">
+        <Link href="/" passHref>
+          <button className="bg-[#212429] text-gray-200 py-2 px-4 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
+            Voltar para o Home
+          </button>
+        </Link>
+      </div>
+      <div className="mt-4 text-center">
+          <p className="text-sm">&copy; {new Date().getFullYear()} Marlon Jerold. Todos os direitos reservados.</p> <br></br>
+        </div>
     </main>
   );
 }
