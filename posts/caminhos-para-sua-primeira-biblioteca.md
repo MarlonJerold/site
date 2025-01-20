@@ -9,6 +9,7 @@ Olá caro leitor, primeiramente peço desculpas pelo atraso em criar mais um pos
 Uma biblioteca é nada mais nada menos que um código escrito por outra pessoa, seja por conta de uma necessidade que levou a pessoa escrever em seus projetos pessoais, ou até mesmo dentro de empresas onde tem um suporte, mas vamos focar na primeira opção, pois acredito que conseguimos fazer isso acontecer bem melhor.
  
 Quando adicionamos ela como dependência ao nosso projeto, conseguimos acessos o que queremos acessar, exemplo, imagine que você precise criar um sistema de autenticação para seu projeto, você olha e pensa, pow, eu estou utilizando Java com Spring Boot, certamente já tem algo criado que possa me ajudar nessa jornada, como o Spring Security, adicionamos a dependência dele ao nosso projeto
+
 ```java
     <dependency>
       <groupId>org.springframework.security</groupId>

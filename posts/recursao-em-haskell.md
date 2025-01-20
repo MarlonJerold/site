@@ -18,7 +18,7 @@ Pense em um conceito básico de matemática, como *f(x)=algumacoisa*. Aqui, defi
 
 Agora, imagine que temos uma função em uma linguagem de programação que recebe um *Int* e retorna um *Int*. Algo como:
 
-```
+```haskell
 fun(0) = 1  
 fun(n) = n * fun(n - 1)
 ```
@@ -55,7 +55,7 @@ No final, ela retorna todo o caminho de volta com os resultados: *5×4×3×2×1*
 Se você já trabalhou com linguagens funcionais como Haskell, talvez tenha notado que esse padrão é chamado de pattern matching. É uma forma declarativa de definir as regras diretamente no código.
 Por exemplo:
 
-```
+```haskell
 fun(0) = 1  
 fun(n) = n * fun(n - 1)  
 ```

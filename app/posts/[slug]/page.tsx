@@ -6,10 +6,11 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import { BlockMath, InlineMath } from 'react-katex';  // Importando BlockMath e InlineMath
-import 'katex/dist/katex.min.css';  // Importando o CSS do KaTeX
+import { BlockMath, InlineMath } from 'react-katex';
+import 'katex/dist/katex.min.css';
 import RedesSociais from "@/components/RedesSociais";
 import Header from "@/components/Header";
+import CodeBlock from "@/components/CodeBlock";
 
 interface Post {
   slug: string;
@@ -24,28 +25,34 @@ interface Post {
 async function getAllPosts(): Promise<Post[]> {
   const files = fs.readdirSync(path.join(process.cwd(), 'posts'));
 
-  const posts = files.map((file) => {
+  return files.map((file) => {
     const filePath = path.join(process.cwd(), 'posts', file);
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const { data, content } = matter(fileContent);
 
-    const postData = {
-      title: data.title || "",
-      description: data.description || "",
-      date: data.date || "",
-    };
-
     return {
       slug: file.replace('.md', ''),
-      data: postData,
+      data: {
+        title: data.title || "",
+        description: data.description || "",
+        date: data.date || "",
+      },
       content,
     };
   });
-
-  return posts;
 }
 
-export default async function PostPage({ params }: { params: { slug: string } }) {
+// Novo método para gerar parâmetros estáticos com base no slug
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
+// Alteração de `getStaticProps` para busca direta dentro do componente
+const PostPage = async ({ params }: { params: { slug: string } }) => {
   const posts = await getAllPosts();
   const post = posts.find((post) => post.slug === params.slug);
 
@@ -56,26 +63,29 @@ export default async function PostPage({ params }: { params: { slug: string } })
   return (
     <main className="mx-auto p-4 max-w-4xl">
       <Header />
-      <br />
-      <br />
-      <h1 className="font-bold text-[2.5rem] mb-4">{post.data.title}</h1>
-      <p className="text-gray-500 mb-8">Publicado em: {post.data.date}</p>
+      <div className="mb-8">
+        <h1 className="font-bold text-[2.5rem] mb-4">{post.data.title}</h1>
+        <p className="text-gray-500">Publicado em: {post.data.date}</p>
+      </div>
 
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         components={{
-          p({ children }: { children?: React.ReactNode }) {
+          p({ children }) {
             const value = String(children);
-
             if (value.startsWith("$$") && value.endsWith("$$")) {
               return <BlockMath>{value.slice(2, -2)}</BlockMath>;
             }
-
             if (value.startsWith("\\(") && value.endsWith("\\)")) {
               return <InlineMath>{value.slice(2, -2)}</InlineMath>;
             }
-
             return <p>{children}</p>;
+          },
+          code({ className, children }) {
+            if (className && className.startsWith('language-')) {
+              return <CodeBlock code={String(children)} language={className.split('-')[1]} />;
+            }
+            return <code className={className}>{children}</code>;
           },
         }}
         className="prose prose-invert max-w-none"
@@ -83,30 +93,26 @@ export default async function PostPage({ params }: { params: { slug: string } })
         {post.content}
       </ReactMarkdown>
 
-      <div className="mt-8">
-        <Link href="/" passHref>
+      <div className="mt-8 text-center">
+        <Link href="/">
           <button className="bg-[#212429] text-gray-200 py-2 px-4 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
             Voltar para o Home
           </button>
         </Link>
       </div>
-      <section className="flex flex-col items-center justify-center min-h-[50vh] space-y-6">
+
+      <section className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 mt-8">
         <RedesSociais />
         <p className="text-lg text-center text-[#c9c9c9] max-w-lg">
           O que passa na mente de um pato que escreve códigos
         </p>
       </section>
-      <div className="mt-8">
-        <Link href="/" passHref>
-          <button className="bg-[#212429] text-gray-200 py-2 px-4 rounded-2xl shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out">
-            Voltar para o Home
-          </button>
-        </Link>
-      </div>
-      <div className="mt-4 text-center">
+
+      <footer className="mt-8 text-center">
         <p className="text-sm">&copy; {new Date().getFullYear()} Marlon Jerold. Todos os direitos reservados.</p>
-        <br />
-      </div>
+      </footer>
     </main>
   );
-}
+};
+
+export default PostPage;

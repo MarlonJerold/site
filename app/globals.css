@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'prismjs/themes/prism-tomorrow.css'; 
+
 :root {
   --foreground-rgb: 229, 231, 235;
   --background-start-rgb: 20, 24, 39;
@@ -35,7 +37,6 @@ body {
 .prose {
   font-family: 'Inter', sans-serif;
   line-height: 1.75;
-  color: #e5e7eb; /* Texto claro para fundo escuro */
   background-color: #15191d; /* Fundo escuro */
 }
 
@@ -123,18 +124,12 @@ body {
   font-style: italic;
 }
 
-/* Códigos */
-.prose code {
-  background-color: #2d3748; /* Fundo escuro para o código */
-  color: #f7fafc; /* Texto claro para o código */
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-}
-
 .prose pre {
-  background-color: #2d3748; /* Fundo escuro para o bloco de código */
+  background-color: #15191d; /* Fundo escuro para o bloco de código */
   padding: 1rem;
   border-radius: 4px;
+  word-wrap: break-word;  
+  white-space: pre-wrap;
   overflow-x: auto;
   margin-bottom: 1rem;
   color: #f7fafc; /* Texto claro para o código */
