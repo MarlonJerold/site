@@ -12,6 +12,12 @@ interface ContentItem {
 const content: ContentItem[] = [
   {
     type: "tutorial",
+    title: "A Recursão em Haskell",
+    description: "Entenda como funciona Recursão em Haskell",
+    link: "/posts/recursao-em-haskell"
+  },
+  {
+    type: "tutorial",
     title: "Meu Primeiro Post Aqui",
     description: "Primeira publicação no blog do site",
     link: "/posts/primeiro-post"
