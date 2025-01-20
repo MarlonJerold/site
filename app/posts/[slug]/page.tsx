@@ -10,7 +10,6 @@ import { BlockMath, InlineMath } from 'react-katex';  // Importando BlockMath e 
 import 'katex/dist/katex.min.css';  // Importando o CSS do KaTeX
 import RedesSociais from "@/components/RedesSociais";
 import Header from "@/components/Header";
-import Streaming from "@/components/Streaming";
 
 interface Post {
   slug: string;
@@ -65,7 +64,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         components={{
-          p({ node, children }: { node?: any; children?: React.ReactNode }) {
+          p({ children }: { node?: any; children?: React.ReactNode }) {
             const value = String(children);
 
             if (value.startsWith("$$") && value.endsWith("$$")) {
