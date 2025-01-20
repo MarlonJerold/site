@@ -2,7 +2,7 @@
 
 Bem-vindo ao blog! Este é um artigo em **Markdown**.
 
-## Tecnologias que utilizei para usar esse Post/Blog
+## Tecnologias que utilizei para criar esse Post/Blog
 - React
 - Next.js
 - Tailwind CSS
