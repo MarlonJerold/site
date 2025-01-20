@@ -9,7 +9,6 @@ import Link from 'next/link';
 import { BlockMath, InlineMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 import RedesSociais from "@/components/RedesSociais";
-import Header from "@/components/Header";
 import CodeBlock from "@/components/CodeBlock";
 
 interface Post {
