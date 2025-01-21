@@ -15,6 +15,12 @@ const projects: Project[] = [
     description: "Milho News é um portal diário open-source que reúne as principais novidades, tendências, discussões e oportunidades na Bluesky para desenvolvedores brasileiros. Oferece resumos diretos e práticos para manter você atualizado sobre o que realmente importa no universo dev.",
     tech: ["Java", "Spring Boot", "Python", "JavaScript", "Docker", "Gemini", "React"],
     link: "https://milho.site"
+  },
+  {
+    title: "O Novo Comunista",
+    description: "O Novo Comunista é um sistema de votação para decidirmos de uma vez por todas quem será o líder da bolha de desenvolvedores do Blusky!!",
+    tech: ["Typescript", "React", "Next", "MongoDB"],
+    link: "https://novocomunista.vercel.app/"
   }
 ]
 

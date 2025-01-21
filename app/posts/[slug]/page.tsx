@@ -41,7 +41,6 @@ async function getAllPosts(): Promise<Post[]> {
   });
 }
 
-// Novo método para gerar parâmetros estáticos com base no slug
 export async function generateStaticParams() {
   const posts = await getAllPosts();
 
