@@ -11,6 +11,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "Portal de Ciência da Computação Open Source",
+    description: "Este portal é um projeto em construção voltado para estudos no curso de Ciência da Computação, inspirado no projeto Universidade Brasileira Livre (UBL). Nosso objetivo é criar uma plataforma de aprendizado open source, acessível a todos. Atualmente, disponibilizamos a grade curricular do curso da UBL e estamos trabalhando para adicionar mais conteúdos e recursos educacionais.",
+    tech: ["Typescript", "React", "Next"],
+    link: "https://universidadelivre.vercel.app/"
+  },
+  {
     title: "Milho News",
     description: "Milho News é um portal diário open-source que reúne as principais novidades, tendências, discussões e oportunidades na Bluesky para desenvolvedores brasileiros. Oferece resumos diretos e práticos para manter você atualizado sobre o que realmente importa no universo dev.",
     tech: ["Java", "Spring Boot", "Python", "JavaScript", "Docker", "Gemini", "React"],
