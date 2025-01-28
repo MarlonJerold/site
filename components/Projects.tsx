@@ -60,7 +60,7 @@ interface ProjectCardProps {
 function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
-      className="bg-[#212429] text-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+      className="bg-[#2d3748] text-gray-200 rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -77,7 +77,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
         <a 
           href={project.link} 
-          className="inline-flex items-center text-[#c9c9c9] hover:text-[#313b4b]"
+          className="inline-flex items-center text-[#c9c9c9] hover:text-[#c9c9c9]"
           target="_blank"
           rel="noopener noreferrer"
         >

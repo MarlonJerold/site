@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <motion.header 
-      className="bg-[#212429] shadow-lg fixed top-0 left-0 w-full z-20" 
+      className="bg-[#2d3748] shadow-lg fixed top-0 left-0 w-full z-20" 
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
