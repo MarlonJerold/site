@@ -48,12 +48,12 @@ const Streaming = async () => {
         <div className="grid grid-cols-1 gap-6">
           {posts.map((item, index) => (
             <div key={index} className="p-6 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 ease-in-out">
-              <h3 className="text-2xl font-semibold text-white mb-3">{item.title}</h3>
-              <p className="text-gray-300 mb-3">{item.description}</p>
-              <p className="text-sm text-gray-200">{item.date}</p>
+              <h3 className="text-2xl font-semibold text-gray-500 mb-3">{item.title}</h3>
+              <p className="text-gray-400 mb-3">{item.description}</p>
+              <p className="text-sm text-gray-500">{item.date}</p>
               <a
                 href={item.link}
-                className="mt-4 inline-block text-indigo-300 hover:text-indigo-500 transition-colors duration-300"
+                className="mt-4 inline-block text-indigo-300 hover:text-indigo-400 transition-colors duration-300"
               >
                 Ver post
               </a>
