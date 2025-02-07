@@ -9,9 +9,6 @@ export default function Header() {
 
   const navItems: { label: string, href: string }[] = [
     { label: 'Home', href: '/' },
-    { label: 'Sobre', href: '/sobre' },
-    { label: 'Projetos', href: '/projetos' },
-    { label: 'Experiência', href: '/experiencia' },
   ];
 
   return (

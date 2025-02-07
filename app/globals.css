@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'prismjs/themes/prism-tomorrow.css'; 
+@import 'prismjs/themes/prism-tomorrow.css';
 
 :root {
   --background: 220 14% 96%;
@@ -43,21 +43,22 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #2d3748;
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
+  background: #888;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #718096;
+  background: #555;
 }
 
 .prose {
   font-family: 'Inter', sans-serif;
   line-height: 1.75;
-
+  color: hsl(var(--foreground));
 }
 
 /* Cabeçalhos */
@@ -65,56 +66,56 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
-  color: #23252b; /* Cor clara para título */
+  color: hsl(var(--foreground));
 }
 
 .prose h2 {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #23252b; /* Cor clara, mas menos intensa que o h1 */
+  color: hsl(var(--foreground));
 }
 
 .prose h3 {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #23252b; /* Cor clara para h3 */
+  color: hsl(var(--foreground));
 }
 
 .prose h4 {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  color: #23252b; /* Cor clara para h4 */
+  color: hsl(var(--foreground));
 }
 
 .prose h5 {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #a0aec0; /* Cor clara mais suave */
+  color: hsl(var(--foreground));
 }
 
 .prose h6 {
   font-size: 1rem;
   font-weight: bold;
-  color: #23252b; /* Cor mais suave para h6 */
+  color: hsl(var(--foreground));
 }
 
 /* Parágrafos */
 .prose p {
   margin-bottom: 1rem;
-  color: #23252b; /* Cor clara para o texto do parágrafo */
+  color: hsl(var(--foreground));
 }
 
 /* Links */
 .prose a {
-  color: #23252b; /* Cor azul para links */
+  color: hsl(var(--primary));
   text-decoration: underline;
 }
 
 .prose a:hover {
-  color: #63b3ed; /* Cor mais clara ao passar o mouse */
+  color: hsl(var(--primary-foreground));
 }
 
 /* Listas */
@@ -132,18 +133,17 @@ body {
 
 .prose li {
   margin-bottom: 0.5rem;
-  color: #23252b; /* Texto claro para listas */
+  color: hsl(var(--foreground));
 }
 
 /* Citações */
 .prose blockquote {
   margin-left: 1rem;
   padding-left: 1rem;
-  border-left: 4px solid #4a5568; /* Borda suave, cor escura */
-  color: #23252b; /* Texto claro para citação */
+  border-left: 4px solid hsl(var(--muted));
+  color: hsl(var(--muted-foreground));
   font-style: italic;
 }
-
 
 /* Imagens */
 .prose img {
@@ -162,35 +162,141 @@ body {
 
 .prose th, .prose td {
   padding: 0.75rem;
-  border: 1px solid #2d3748; /* Bordas escuras */
+  border: 1px solid hsl(var(--border));
   text-align: left;
-  color: #23252b; /* Texto claro nas células */
+  color: hsl(var(--foreground));
 }
 
 .prose th {
-  background-color: #23252b; /* Fundo escuro para cabeçalhos */
+  background-color: hsl(var(--muted));
   font-weight: bold;
 }
 
+/* Ajustes para o CodeBlock */
+pre[class*="language-"],
+code[class*="language-"] {
+  color: #e0e0e0;
+  background: none;
+  font-family: "Fira Code", Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
 
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+  border-radius: 0.3em;
+  background: #2d2d2d;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #2d2d2d;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #999;
+}
+
+.token.punctuation {
+  color: #ccc;
+}
+
+.token.tag,
+.token.attr-name,
+.token.namespace,
+.token.deleted {
+  color: #e2777a;
+}
+
+.token.function-name {
+  color: #6196cc;
+}
+
+.token.boolean,
+.token.number,
+.token.function {
+  color: #f08d49;
+}
+
+.token.property,
+.token.class-name,
+.token.constant,
+.token.symbol {
+  color: #f8c555;
+}
+
+.token.selector,
+.token.important,
+.token.atrule,
+.token.keyword,
+.token.builtin {
+  color: #cc99cd;
+}
+
+.token.string,
+.token.char,
+.token.attr-value,
+.token.regex,
+.token.variable {
+  color: #7ec699;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+  color: #67cdcc;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.inserted {
+  color: green;
+}
+
+/* Estilos para equações matemáticas */
 .math {
   display: inline-block;
   font-family: 'Courier New', Courier, monospace;
-  color: #f7fafc; /* Texto claro para as equações */
-  background-color: #2d3748; /* Fundo escuro */
+  color: hsl(var(--foreground));
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   margin: 0.2rem 0;
   white-space: nowrap;
   overflow-x: auto;
+  background-color: hsl(var(--muted));
 }
 
 .math-display {
   display: block;
-  background-color: #2d3748;
   padding: 1rem;
   border-radius: 4px;
   margin: 1rem 0;
-  color: #f7fafc;
+  color: hsl(var(--foreground));
   overflow-x: auto;
+  background-color: hsl(var(--muted));
 }
