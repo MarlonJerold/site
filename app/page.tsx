@@ -1,6 +1,5 @@
 import Header from '@/components/Header';
 import Streaming from '@/components/Streaming'
-import RedesSociais from '@/components/RedesSociais';
 import About from '@/components/About';
 
 export default function Home() {
