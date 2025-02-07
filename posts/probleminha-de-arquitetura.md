@@ -14,7 +14,7 @@ Com uma abordagem automatizada, a infraestrutura pode ser configurada por meio d
 
 ## Arquitetura
 
-![image](https://github.com/user-attachments/assets/eda31610-d0d1-421b-a9d8-6eabf5d78d92)
+![image](https://github.com/user-attachments/assets/cbfe150d-eb03-4d23-8dda-58937418fd1b)
 
 
 ### Principais Objetivos
