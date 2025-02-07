@@ -122,8 +122,8 @@ const PostPage = async ({ params }: { params: { slug: string } }) => {
         <section className="flex flex-col items-center justify-center space-y-6 mt-12">
           <RedesSociais />
           <p className="text-lg text-center text-gray-600 max-w-lg italic">
-            "O que passa na mente de um pato que escreve códigos"
-          </p>
+  &quot;O que passa na mente de um pato que escreve códigos&quot;
+        </p>
         </section>
       </main>
 
