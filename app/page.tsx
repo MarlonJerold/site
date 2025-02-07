@@ -1,4 +1,3 @@
-import Header from '@/components/Header';
 import Streaming from '@/components/Streaming'
 import About from '@/components/About';
 
