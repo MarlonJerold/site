@@ -1,6 +1,6 @@
 ---
-title: "Implantação de WordPress Escalável na AWS com Docker, RDS e EFS"
-description: "Implantação de uma aplicação WordPress escalável na AWS utilizando Docker, RDS (MySQL), EFS e Load Balancer, garantindo alta disponibilidade, persistência de dados e segurança."
+title: "Implementação de WordPress Escalável na AWS com Docker, RDS e EFS"
+description: "Implementação de uma aplicação WordPress escalável na AWS utilizando Docker, RDS (MySQL), EFS e Load Balancer, garantindo alta disponibilidade, persistência de dados e segurança."
 date: "2025-02-07"
 ---
 
