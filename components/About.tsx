@@ -22,7 +22,14 @@ export default function About() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <Image src="/imagem.png" alt="Marlon Jerold" width={250} height={250} className="rounded-full shadow-lg" />
+            <Image
+  src="/eu.jpg"
+  alt="Marlon Jerold"
+  width={250}
+  height={250}
+  className="rounded-full shadow-lg object-cover aspect-square"
+/>
+
           </motion.div>
           <motion.div
             className="md:w-2/3"
