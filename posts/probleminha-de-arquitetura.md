@@ -6,6 +6,16 @@ date: "2025-02-07"
 
 # Introdução
 
+Olá, pessoal! Gostaria de compartilhar um pouco sobre o projeto que implementei durante meu estágio em DevSecOps (posso compartilhar tranquilamente).
+
+Atualmente, estou aprendendo mais sobre como a infraestrutura funciona e, pensando nisso, irei compartilhar a ideia por trás do projeto e a solução adotada.
+
+Foi solicitado que minha dupla e eu implementássemos a solução para uma arquitetura já predefinida. Portanto, não recomendo utilizar essa solução no dia a dia, pois se trata de um projeto de aprendizagem.
+
+Dito isso, vamos falar um pouco sobre AWS enquanto apresento o projeto.
+
+# Sobre O Projeto
+
 Este projeto tem como objetivo demonstrar a implementação de uma aplicação WordPress de forma escalável e segura, utilizando os principais serviços da AWS. A solução combina o uso de containers Docker para a aplicação, um banco de dados gerenciado RDS (MySQL) para armazenamento de dados, e o EFS (Elastic File System) para persistência e compartilhamento de arquivos estáticos.
 
 Para garantir alta disponibilidade e balanceamento de carga, a arquitetura inclui um Load Balancer configurado para gerenciar o tráfego de entrada. Além disso, o projeto adota boas práticas de segurança, como evitar a exposição direta da aplicação via IP público e centralizar o tráfego através do Load Balancer.
